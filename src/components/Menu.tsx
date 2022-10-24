@@ -13,9 +13,9 @@ enum MenuEnum {
 	Overview = 'overview',
 	Customers = 'customers',
 	defaults = 'defaults',
-	fulfilment = 'fulfilment',
+	fulfilments = 'fulfilments',
 }
-type MenuItemType = 'overview' | 'customers' | 'defaults' | 'fulfilment';
+type MenuItemType = 'overview' | 'customers' | 'defaults' | 'fulfilments';
 interface IMouseOverMenu {
 	name: MenuItemType;
 	data: boolean;
@@ -137,19 +137,19 @@ export const Menu = () => {
 				<MenuItem
 					style={{ marginTop: 34 }}
 					onMouseOver={() =>
-						setMouseOver({ name: MenuEnum.fulfilment, data: true })
+						setMouseOver({ name: MenuEnum.fulfilments, data: true })
 					}
 					onMouseOut={() =>
-						setMouseOver({ name: MenuEnum.fulfilment, data: false })
+						setMouseOver({ name: MenuEnum.fulfilments, data: false })
 					}
 				>
 					<IconFulfilment
 						style={{ marginRight: 11 }}
-						fill={getMenuItemColor(MenuEnum.fulfilment)}
+						fill={getMenuItemColor(MenuEnum.fulfilments)}
 					/>
 					<Link to="/fulfilments">
 						<TextOverview
-							menuItemHoverColor={getMenuItemColor(MenuEnum.fulfilment)}
+							menuItemHoverColor={getMenuItemColor(MenuEnum.fulfilments)}
 						>
 							Fulfilments
 						</TextOverview>
